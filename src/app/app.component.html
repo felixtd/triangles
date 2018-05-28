@@ -1,0 +1,44 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <app-header></app-header>
+</div>
+<hr>
+  <div class="row" style="margin-left: 40px; margin-bottom: 20px;">
+    <div class="col-xs-3">
+      <label for="inputX" class="control-label" style="margin-right: 10px">X (column: 1 - 12):</label>
+      <input type="text" class="form-control" id="inputX" style="width: 30px;  margin-right: 40px;" #inputX />
+      <label for="inputY" class="control-label" style="margin-right: 10px">Y (row: A - F):</label>
+      <input type="text" class="form-control" id="inputY" style="width: 30px;" #inputY />
+    </div>
+  </div>
+  <div class="row" style="margin-left: 40px; margin-bottom: 20px;">
+      <div class="col-xs-6">
+          <label class="control-label" style="margin-right: 15px;"><b>V1:</b></label>
+          <label for="v1x" class="control-label" style="margin-right: 10px">X:</label>
+          <input type="text" class="form-control" id="v1x" style="width: 30px;  margin-right: 20px;" readonly [ngModel]="v1x"/>
+          <label for="v1y" class="control-label" style="margin-right: 10px">Y:</label>
+          <input type="text" class="form-control" id="v1y" style="width: 30px;  margin-right: 20px;" readonly [ngModel]="v1y" />
+
+          <label class="control-label" style="margin-right: 15px; margin-left: 15px;"><b>V2:</b></label>
+          <label for="v2x" class="control-label" style="margin-right: 10px">X:</label>
+          <input type="text" class="form-control" id="v2x" style="width: 30px;  margin-right: 20px;" readonly [ngModel]="v2x" />
+          <label for="v2y" class="control-label" style="margin-right: 10px">Y:</label>
+          <input type="text" class="form-control" id="v2y" style="width: 30px;  margin-right: 20px;" readonly [ngModel]="v2y" />
+
+          <label class="control-label" style="margin-right: 15px; margin-left: 15px;"><b>V3:</b></label>
+          <label for="v3x" class="control-label" style="margin-right: 10px">X:</label>
+          <input type="text" class="form-control" id="v3x" style="width: 30px;  margin-right: 20px;" readonly [ngModel]="v3x" />
+          <label for="v3y" class="control-label" style="margin-right: 10px">Y:</label>
+          <input type="text" class="form-control" id="v3y" style="width: 30px;  margin-right: 20px;" readonly [ngModel]="v3y" />
+        </div>
+    </div>
+    <div class="row" style="margin-left: 40px; margin-bottom: 20px;">
+      <div class="col-xs-3">
+        <span>Verifying input from generated vertices...   {{confirmInput}}</span>
+      </div>
+      </div>
+      <div class="row" style="margin-left: 40px; margin-bottom: 20px;">
+        <div class="col-xs-3">
+          <button class="btn btn-primary" (click)="computeTriangle(inputX.value, inputY.value)">Compute Coordinates</button>
+        </div>
+      </div>
